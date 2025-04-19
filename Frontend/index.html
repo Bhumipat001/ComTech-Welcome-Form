@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Comtech</title>
+    <link rel="icon" href="src/images/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />
+</head>
+
+<body>
+  <h2 class="content-head">Welcome to Comtech</h2>
+
+  <form class="gform pure-form pure-form-stacked" method="POST">
+    <div class="form-elements">
+      <fieldset class="pure-group">
+        <label for="name">Full name </label>
+        <input id="name" name="name" placeholder="Enter your first and last name" />
+        <span id="name-error" class="error-message">Full name is required.</span>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="KUS">KUS </label>
+        <input id="KUS" name="KUS" placeholder="KUS" type="number" />
+        <span id="kus-error" class="error-message">KUS is required.</span>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="picture">
+          Upload Photo: <span class="required"></span>
+          <span id="label-file-name" style="display: none;"></span>
+        </label>
+        <div class="upload-container">
+          <label for="picture">
+            <input type="file" id="picture" name="picture" accept="image/*" style="display: none;" />
+            <div id="upload-preview">
+              <span id="upload-instructions">Drag and drop files here or click to upload</span>
+              <span id="file-name" style="display: none;"></span>
+              <img id="preview-image" class="preview-image" src="" alt="Preview" style="display: none;" />
+            </div>
+          </label>
+        </div>
+        <span id="picture-error" class="error-message">Picture is required.</span>
+        <canvas id="image-preview"></canvas>
+      </fieldset>
+
+      <input type="hidden" id="croppedData" name="croppedData" />
+
+      <div class="button-container">
+        <button id="send-button" class="button-success pure-button button-xlarge">
+          <div class="spinner"></div>
+          <span class="button-text">Upload</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="thankyou_message">
+      <h2>Nice to have you as a new member of the ComTech Club!</h2>
+      <button onclick="window.location.href='members'" class="button-success pure-button button-xlarge check-members-btn">
+        Check out members page
+      </button>
+    </div>
+  </form>
+
+  <div id="crop-modal">
+    <div class="modal-content">
+      <h3>Crop your image</h3>
+      <div class="crop-container">
+        <img id="crop-image" />
+      </div>
+      <button id="crop-button" class="button-success pure-button">Done</button>
+      <button id="cancel-crop" class="pure-button">Cancel</button>
+    </div>
+  </div>
+
+  <div id="preview-section" style="display: none;">
+    <img id="cropped-preview" alt="Cropped Preview" />
+  </div>
+
+  <footer>
+    <img src="src/images/logo.webp" alt="ComTechClub Logo">
+    <div class="footer-content">
+        <p>&copy; 2025 ComTechClub. All rights reserved.<br>
+            Kasetsart University Laboratory School<br>
+            <span class="separator"></span>
+            ComTech Room<br>
+            FabLab Kasetsart University School<br>
+            Building 6<br>
+            Bangkok, Thailand
+        </p>
+        <a href="https://github.com/Bhumipat001/ComTech-Welcome-Form" class="github-link">
+            <img src="src/images/github_icon.svg" alt="GitHub Logo" class="github-logo">
+            <span>Source Code</span>
+        </a>
+    </div>
+</footer>
+
+  <script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+  <script type="module" src="src/scripts/script.js"></script>
+</body>
+</html>
