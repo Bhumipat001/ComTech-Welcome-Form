@@ -6,4 +6,4 @@ This is the website for the ComTech Club at Kasetsart University Laboratory Scho
 
 The website consists of a **Frontend** and a **Backend**:
 - **Frontend**: The frontend is built with **HTML**, **CSS**, and **JavaScript**. It uses client-side functionality to upload data to the backend.
-- **Backend**: The backend is implemented using **Google Apps Script**. It records the submitted data into a **Google Sheets**.
+- **Backend**: Implemented using **Google Apps Script**. It records the submitted data into a **Google Sheets**.
